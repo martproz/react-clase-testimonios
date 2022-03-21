@@ -1,38 +1,37 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 18px;
+  background-color: #f5f6f7;
+}
+
+h1 {
+  max-width: 940px;
+  font-size: 2.5em; 
+  /* EM es un factor relativo al tamaño del contenedor. Si el contenedor tiene por ej 10px, el FS será el 2.5 de su valor  */
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 40px 0;
+  /*40px es superior e inferior; 0 es derecho e izquierdo */
+}
+
+.App { /*Le asignamos estilo al contenedor principal*/
+  min-height: 100vh; /*el 100% de la pantalla vertical */
+  display: flex;
+  flex-wrap: wrap; /*si un elemento toma todo el ancho del contendor, los otros elementos se ubicarán en la siguiente línea */
+  align-items: center; /*centra los elementos */
+  justify-content: center; /*centra los elementos horizontalmente */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contenedor-principal {
+  min-height: 600px; /*la altura mínima permitirá que el contendor se estire en caso de que se agreguen testimonios. Si usáramos sólo heigth, el contendor no se estiraría*/
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
